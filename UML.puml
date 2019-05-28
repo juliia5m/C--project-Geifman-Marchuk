@@ -1,0 +1,86 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class Customer {
+	+Customer(string name, int age, double money)
+	+k : int
+	+money : int
+}
+
+
+class Human {
+	+Human(string name, double age)
+	#age : int
+	#name : string
+	+show() : void
+}
+
+
+class Product {
+	+Product(string name, double price)
+	+get_price() : double
+	-price : double
+	+get_name() : string
+	-name : string
+	+changePrice(double q) : void
+	+show() : void
+}
+
+
+class Seller {
+	+Seller(string name, int age, double salary)
+	-salary : double
+	+quantity : int
+	+changeSalary(double q) : void
+	+show() : void
+}
+
+
+class Shop {
+	+Shop(string name)
+	-profit : double
+	-name : string
+	-costumers : vector<Customer>
+	-products : vector<Product>
+	-sellers : vector<Seller>
+	+get_customer(Customer a) : void
+	+get_product(Product a) : void
+	+get_seller(Seller a) : void
+	+sell_product(Product a, Customer b, Seller c) : void
+	+show() : void
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+Human <|-- Customer
+
+
+Human <|-- Seller
+
+
+
+
+
+/' Aggregation relationships '/
+
+Shop o-- Customer
+
+
+Shop o-- Product
+
+
+Shop o-- Seller
+
+
+
+
+@enduml
