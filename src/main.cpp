@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <string>
 #include "Human.h"
 #include "Customer.h"
@@ -23,7 +23,7 @@ int main()
     srand(time(0));
     setlocale(LC_ALL, "Russian");
     int n;
-    cout << "Ââîä ñ êîíñîëè èëè ôàéëà?" << endl << "1 - êîíñîëü, 2 - ôàéë" << endl;
+    cout << "Ð’Ð²Ð¾Ð´ Ñ ÐºÐ¾Ð½ÑÐ¾Ð»Ð¸ Ð¸Ð»Ð¸ Ñ„Ð°Ð¹Ð»Ð°?" << endl << "1 - ÐºÐ¾Ð½ÑÐ¾Ð»ÑŒ, 2 - Ñ„Ð°Ð¹Ð»" << endl;
     cin >> n;
     if(n == 1)
     {
@@ -32,13 +32,13 @@ int main()
         double e;
         int q;
         string name;
-        cout << "Ââåäèòå íàçâàíèå ìàãàçèíà: ";
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½Ð°: ";
         cin >> name;
         Shop s(name);
-        cout << "Ââåäèòå êîëè÷åñòâî äíåé" << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´Ð½ÐµÐ¹" << endl;
         cin >> time;
         cout << endl;
-        cout << "Ââåäèòå êîëè÷åñòâî òîâàðîâ" << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‚Ð¾Ð²Ð°Ñ€Ð¾Ð²" << endl;
         cin >> q;
         vector<Product> products;
         vector<Customer> customers;
@@ -46,39 +46,39 @@ int main()
         for(int i = 0; i < q; i++)
         {
             cout <<  endl;
-            cout << "Èìÿ òîâàðà: ";
+            cout << "Ð˜Ð¼Ñ Ñ‚Ð¾Ð²Ð°Ñ€Ð°: ";
             cin >> name;
-            cout << endl << "Ñòîèìîñòü: ";
+            cout << endl << "Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ: ";
             cin >> w;
             Product a(name, w);
             products.push_back(a);
             s.get_product(a);
         }
-        cout << "Ââåäèòå êîëè÷åñòâî ïðîäàâöîâ" << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ñ€Ð¾Ð´Ð°Ð²Ñ†Ð¾Ð²" << endl;
         cin >> q;
         for(int i = 0; i < q; i++)
         {
             cout << endl << "1: " << endl;
-            cout << "Èìÿ ïðîäàâöà: ";
+            cout << "Ð˜Ð¼Ñ Ð¿Ñ€Ð¾Ð´Ð°Ð²Ñ†Ð°: ";
             cin >> name;
-            cout << endl << "Âîçðàñò: ";
+            cout << endl << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚: ";
             cin >> w;
-            cout << endl << "Çàðïëàòà: ";
+            cout << endl << "Ð—Ð°Ñ€Ð¿Ð»Ð°Ñ‚Ð°: ";
             cin >> e;
             Seller a(name, w, e);
             sellers.push_back(a);
             s.get_seller(a);
         }
-        cout << "Ââåäèòå êîëè÷åñòâî ïîêóïàòåëåé" << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð¾ÐºÑƒÐ¿Ð°Ñ‚ÐµÐ»ÐµÐ¹" << endl;
         cin >> q;
         for(int i = 0; i < q; i++)
         {
             cout << endl << "1: " << endl;
-            cout << "Èìÿ ïîêóïàòåëÿ: ";
+            cout << "Ð˜Ð¼Ñ Ð¿Ð¾ÐºÑƒÐ¿Ð°Ñ‚ÐµÐ»Ñ: ";
             cin >> name;
-            cout << endl << "Âîçðàñò: ";
+            cout << endl << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚: ";
             cin >> w;
-            cout << endl << "Äåíüãè: ";
+            cout << endl << "Ð”ÐµÐ½ÑŒÐ³Ð¸: ";
             cin >> e;
             Customer a(name, w, e);
             customers.push_back(a);
@@ -96,7 +96,7 @@ int main()
             else
                 for(int j = 0; j < products.size(); j++)
                     products[j].changePrice(0);
-            cout << "Èíôîðìàöèÿ î ìàãàçèíå ïîñëå " << i + 1 << " äíÿ" << endl;
+            cout << "Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð¾ Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½Ðµ Ð¿Ð¾ÑÐ»Ðµ " << i + 1 << " Ð´Ð½Ñ" << endl;
             s.show();
         }
     }
