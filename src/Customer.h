@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class Customer:public Human                     # клас Покупець : ім''я, вік та гроші покупця ; інклудим Human.h
+class Customer:public Human                     // клас Покупець : ім''я, вік та гроші покупця ; інклудим Human.h
 {
     public:
         Customer(string name, int age, double money);
