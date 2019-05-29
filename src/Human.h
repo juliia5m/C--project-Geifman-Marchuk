@@ -5,7 +5,7 @@ using namespace std;
 
 class Human
 {
-    public:
+    public:                                            # клас Людина: ім''я та вік людини
         Human(string name, double age);
         virtual void show();
     protected:
