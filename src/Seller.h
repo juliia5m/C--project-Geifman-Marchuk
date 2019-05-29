@@ -4,7 +4,7 @@
 
 extern bool Error;
 
-class Seller:public Human
+class Seller:public Human                 // клас Продавець. Маємо ім'я,вік та заврплату продавця. Також інклудимо Human.h
 {
     public:
         Seller(string name, int age, double salary);
