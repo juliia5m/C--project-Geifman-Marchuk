@@ -23,7 +23,7 @@ int main()
     srand(time(0));
     setlocale(LC_ALL, "Russian");
     int n;
-    cout << "Ввод с консоли или файла?" << endl << "1 - консоль, 2 - файл" << endl;
+    cout << "Ввод с консоли или файла?" << endl << "1 - консоль, 2 - файл" << endl;         //вибираєм звідки відбуватиметься ввід
     cin >> n;
     if(n == 1)
     {
@@ -32,7 +32,7 @@ int main()
         double e;
         int q;
         string name;
-        cout << "Введите название магазина: ";
+        cout << "Введите название магазина: ";        //вводимо дані
         cin >> name;
         Shop s(name);
         cout << "Введите количество дней" << endl;
@@ -84,7 +84,9 @@ int main()
             customers.push_back(a);
             s.get_customer(a);
         }
-        for(int i = 0; i < time; i++)
+        for(int i = 0; i < time; i++)                      //в залежності від того,скільки продуктів продалось( не всі продаються,оскільки
+                                                           //чим більше днів стоїть продукт,тим нижча ціна на нього або він взагалі
+                                                           // вже не продається,обчислюється прибуток магазину
         {
             int a = random(0, products.size());
             int b = random(0, customers.size());
